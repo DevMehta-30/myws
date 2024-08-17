@@ -5,7 +5,7 @@ import webbrowser
 import subprocess
 import argparse
 
-WORKSPACE_DIR = "C:/Users/devam/OneDrive/Desktop/Workspace"
+WORKSPACE_DIR = os.path.join(os.path.expanduser("~"), ".workspace")
 
 def save_workspace(name, apps, websites, paths):
     if not os.path.exists(WORKSPACE_DIR):
@@ -49,7 +49,7 @@ def start_workspace(name):
             subprocess.Popen(["code", path], shell=True)
         except FileNotFoundError:
             print(f"Error: Could not open path '{path}' in VS Code.")
-            
+
     print(f"Workspace '{name}' started.")
 
 def main():
