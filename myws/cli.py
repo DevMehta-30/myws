@@ -44,7 +44,8 @@ def start_workspace(name):
     
     for path in workspace.get("paths", []):
         print(f"Opening path in VS Code: {path}")
-        path = path.replace("/", "\\")  # Convert to Windows-style path if necessary
+        if os.name == 'nt':  
+            path = path.replace("/", "\\") 
         try:
             subprocess.Popen(["code", path], shell=True)
         except FileNotFoundError:
