@@ -1,0 +1,3 @@
+*.json
+myws.egg-info/
+myws/__pycache__/

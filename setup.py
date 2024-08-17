@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'myws=cli:main',
+            'myws=myws.cli:main',
         ],
     },
     author="Dev Mehta",
@@ -14,7 +14,7 @@ setup(
     description="Allowing users to create workspaces",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/diti-jain/gitsy",
+    url="https://github.com/DevMehta-30/myws",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
